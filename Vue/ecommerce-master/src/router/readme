@@ -1,0 +1,8 @@
+// 進入點
+main.js
+
+// router 配置
+router/index.js
+
+分頁
+Vue Components (**.vue)

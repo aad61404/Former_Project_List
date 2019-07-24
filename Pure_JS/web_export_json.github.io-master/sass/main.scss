@@ -1,0 +1,19 @@
+// 摘要
+@import "abstracts/mixins";        //引用函數clearfix , RWD 配置
+@import "abstracts/variables";     //引用變數如 顏色 字體大小 網格變數
+
+// 基礎設置
+@import "base/base";               //html , body ,  *,*::after,*::before 格式
+@import "base/typography";         // 字體排印學
+
+//組件
+@import "component/button";        //按鈕
+
+//版面設計
+@import "layout/grid";             // 網格系統
+
+.container {
+    text-align: center;
+    border: 1px solid black;
+
+}

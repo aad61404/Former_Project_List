@@ -1,0 +1,92 @@
+
+.col-2 , .col-4 {
+    padding: 0;
+    width: auto;
+    margin: 0;
+}
+
+//  看情況要不要寫在 _grid.scss裡 focus
+.row {
+    // & > .focus1:focus { // 服務器、租用時長 button 選取 更改css
+    //     border: 0.2rem solid $color-blue-light;
+    //     color: $color-blue-light;
+    // }
+
+    // & > .col-2 >.btn:focus {   // 在線人數 button 選取 更改css
+    //     border: 0.2rem solid $color-blue-light;
+    //     color: $color-blue-light;
+    // }    
+}
+
+//  input checkbox 按鍵隱藏
+.check1,.check2,.check3,.check4,.check5 {//,.check4,.check5 { 
+    display: none;
+}
+
+// 寫法 2  服務器、在線人數、 租用時長 button 
+// 所有checkbox checked 時 更改 型態
+  input[type=checkbox]:checked + .btn {  
+    border: 0.2rem solid $color-blue-light;
+    color: $color-blue-light;
+
+  } 
+
+
+  input[type=checkbox]:checked + .col-5 {
+    outline: 0.4rem solid #359ce2;
+    z-index: 1;
+    outline-offset: 0.7rem;
+  } 
+
+  input[type=checkbox]:checked + [class^="item"] {  //checkbox checked 時 底下 所有class 名字是item的 套入該 css 
+    outline: 0.3rem solid #BCBCBC;
+    z-index: 1;
+    outline-offset: 0.7rem;
+  }   
+
+// 按鈕樣式
+.btn {
+    font-size: $default-font-size;
+    padding: 0.8rem;
+    background-color: white;
+    border: 0.2rem solid $color-grey-light;
+    margin: 0;
+ 
+}
+
+
+// 送出鈕樣式
+.send-btn {
+    text-align: center;
+    color: white;
+    background-color: $color-blue-light ;
+    font-size: $default-font-size;
+    border-radius: 8px;
+}
+
+
+//確認後 跳出視窗
+.confrmdiv { 
+    font-size: $default-font-size;
+    font-size: 80%;
+    text-align: center;
+    width: 50%;
+    left: 25%;
+    top: 30%;
+    border: 1px solid #455870;
+    margin-bottom: 1rem;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+    display: block;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+
+    & > p {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+#alert-1 {
+    display: none;
+}

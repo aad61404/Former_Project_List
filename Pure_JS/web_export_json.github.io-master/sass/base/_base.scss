@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: left;
+    /*border: solid 1px black;*/
+
+}
+
+html {
+    // This defines what 1rem is 
+    font-size: 100%; 
+    /*100% == 16px initial */
+    //1rem = 10px ,  10px/16 px = 65.5%
+    // 順序不可換 ，會形成錯誤 從大比到小 選擇適合的規格
+
+    @include respond(big-desktop) {  //width 
+        font-size: 100%; //1rem =12, 12/16
+    }
+
+    @include respond(tab-land) {   // width < 1200 ?  
+        font-size: 75%;  
+    }
+
+
+    @include respond(tab-port) {   // width < 900 ?
+        font-size: 56.25%;  // 1rem = 8px, 8/16 = 50%
+    }
+    //700px
+
+    @include respond(phone) {
+        font-size: 40%;
+    }
+
+
+}
+
+body {
+    box-sizing: border-box;
+}
+

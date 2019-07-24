@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        
+
+        <link rel="stylesheet" href="css/icon-font.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <script src="js/arithmetic.js"></script>
+        <script src="js/export_json.js"></script> <!--輸出成 json -->
+        <script src="js/check123.js"></script> <!--checkbox 單選 -->
+        
+
+        <title>RWD_TEST</title>
+    </head>
+
+
+    <body>
+        <div class="container">
+          
+            <h1 id="rent">租用服务项</h1>
+            <hr>
+            <h3>请选择游戏类型</h3>
+            <div>
+
+            </div>
+            <form action="">
+                <div class="row">
+                    <div class="col-6 choose_type">                   
+                        <input type="checkbox" id="fruit1" name="choose_type" value="orange">
+                        <label for="fruit1">I have a orange</label> <br>
+                        <input type="checkbox" id="fruit2" name="choose_type" value="banana">
+                        <label for="fruit2">I have a banana</label> <br>
+                        <input type="checkbox" id="fruit3" name="choose_type" value="strawberry">
+                        <label for="fruit3">I have a strawberry</label> <br>
+                        <input type="checkbox" id="fruit4" name="choose_type" value="watermelon">
+                        <label for="fruit4">I have a watermelon</label> <br>
+                        <input type="checkbox" id="fruit5" name="choose_type" value="lichee">
+                        <label for="fruit5">I have a lichee</label> <br>
+                                    
+                    </div>
+                    <div class="col-6 choose_type">
+                        <input type="checkbox" id="fruit6" name="choose_type" value="grape">
+                        <label for="fruit6">I have a grape</label> <br>
+                        <input type="checkbox" id="fruit7" name="choose_type" value="lemon">
+                        <label for="fruit7">I have a lemon</label> <br>
+                        <input type="checkbox" id="fruit8" name="choose_type" value="cherry">
+                        <label for="fruit8">I have a cherry</label> <br>
+                        <input type="checkbox" id="fruit9" name="choose_type" value="pineapple">
+                        <label for="fruit9">I have a pineapple</label> <br>
+                        <input type="checkbox" id="fruit10" name="choose_type" value="mango">
+                        <label for="fruit10">I have a mango</label> <br>
+                    </div>
+                </div>
+            </form>
+    
+            <h1>服务器:</h1>
+     
+            <!-- <div class="row justify-content-between">         
+                <button type="radio" class="btn focus1">国际线路</button>
+                <button type="radio" class="btn focus1">防线路</button>
+                <button type="radio" class="btn focus1">CDM加速</button>
+            </div> -->
+
+             <!-- 寫法2 複選用 checkbox (css _button.scss) -->
+             <form action="">
+                <div class="row justify-content-between">
+                    <input type="checkbox" name ="serve" id="fruit11" value="国际线路" class="check1">
+                    <label for="fruit11" class="btn col-3">国际线路</label>
+    
+                    <input type="checkbox" name ="serve" id="fruit12" value="防线路"  class="check1">
+                    <label for="fruit12" class="btn col-3">防线路</label>
+    
+                    <input type="checkbox" name ="serve" id="fruit13" value="CDM加速"  class="check1">
+                    <label for="fruit13" class="btn col-3">CDM加速</label>        
+                </div>
+             
+             </form>
+
+             
+        
+            <h1>在线人数:</h1>
+            <form action="">
+                <div class="row justify-content-between"> <!--justify-content-between  bootstrap 網格用法 -->   
+                    <input type="checkbox" name="online_peo"  id="fruit14" value="10人" class="check2">
+                    <label for="fruit14" class="btn col-2"    onclick="close_disable()">10人</label> 
+                
+                    <input type="checkbox" name="online_peo"  id="fruit15" value="20人" class="check2">
+                    <label for="fruit15" class="btn col-2"    onclick="close_disable()">20人</label> 
+                    
+                    <input type="checkbox" name="online_peo"  id="fruit16" value="30人" class="check2">
+                    <label for="fruit16" class="btn col-2"    onclick="close_disable()">30人</label>
+            
+                    <input type="checkbox" name="online_peo"  id="fruit17" value="40人" class="check2">
+                    <label for="fruit17" class="btn col-2"    onclick="close_disable()">40人</label> 
+                
+                    <input type="checkbox" name="online_peo"  id="fruit18" value="50人" class="check2">
+                    <label for="fruit18" class="btn col-2"    onclick="close_disable()">50人</label>       
+                </div>
+                <br>
+ 
+            </form>
+            <div class="row">
+                <input type="button" class="btn col-4"  value="自定义" id ="customize" onclick="open_disable()">
+                <button class="btn col-2" id="minus"   onclick="subtract()" disabled>-</button> 
+                <input type="text" class="count col-4" name="" id="calculate-people" value="0" disabled>
+                <button class="btn col-2" id="add"   onclick="add()" disabled>+</button> 
+            </div>
+        
+
+
+
+            <!-- ................................. -->
+            <form action="">
+                <h1>租用时长:</h1>
+                <div class="row justify-content-between">
+                    <!-- <button type="button" class="btn col-3" value="1个月">1个月</button> 
+                    <button type="button" class="btn col-3" value="3个月">3个月</button> 
+                    <button type="button" class="btn col-3" value="6个月">6个月</button>  -->
+                    <input type="checkbox" name="rent_time"  id="fruit19" value="1个月" class="check3">
+                    <label for="fruit19" class="btn col-3">1个月</label>  
+                    <input type="checkbox" name="rent_time"  id="fruit20" value="3个月" class="check3">
+                    <label for="fruit20" class="btn col-3">3个月</label>  
+                    <input type="checkbox" name="rent_time"  id="fruit21" value="6个月" class="check3">
+                    <label for="fruit21" class="btn col-3">6个月</label>                  
+                </div>
+            </form>
+
+    
+            <h1>产品名称</h1>
+            
+            <input type="text" class="col-12" name="product_name" id="fruit22">
+
+
+            <form action="">            
+            <h1>产品logo:</h1>
+            <!--grid-container 寫法 _gird.css -->
+            <div class="grid-container">             
+                <input type="checkbox" name="product_logo"  id="fruit23" value="1" class="check4">
+                <label for="fruit23" class="item">1</label>                            
+                <input type="checkbox" name="product_logo"  id="fruit24" value="2" class="check4">
+                <label for="fruit24" class="item">2</label>                                
+                <input type="checkbox" name="product_logo"  id="fruit25" value="3" class="check4">
+                <label for="fruit25" class="item">3</label>                         
+            </div>
+            <br>
+            </form>
+
+            <h1>产品模板:</h1>
+
+            <form action="">           
+            <div class="row">    
+                <input type="checkbox" name="product_template"  id="fruit26" value="1" class="check5">
+                <label for="fruit26"  class="col-5 row-pad-1">1</label> 
+                <button type="button" class="col-2 row-pad-2"></button> 
+                <input type="checkbox" name="product_template"  id="fruit27" value="2" class="check5">
+                <label for="fruit27" class=" col-5 row-pad-1">2</label> 
+          
+            </div>
+            <br>
+            <div class="row">             
+                <input type="checkbox" name="product_template"  id="fruit28" value="3" class="check5">
+                <label for="fruit28" class="col-5 row-pad-1">3</label> 
+                <button type="button" class="col-2 row-pad-2"></button> 
+                <input type="checkbox" name="product_template"  id="fruit29" value="4" class="check5">
+                <label for="fruit29" class="col-5 row-pad-1">4</label> 
+            </div>
+            </form> 
+            <br>
+            <!-- <input type="button" value="确定" class="col-12 send-btn"> -->
+            <button type="button" class="col-12 send-btn" onclick="show_alert_1()">确定</button>
+ 
+            <br>
+            <div class="alert confrmdiv"  id="alert-1" style="display:none">
+                <button type="button" class="close" onclick="close_alert_1()" ><span>×</span></button>
+                <strong> 支付提示 </strong>                
+                    <hr>
+                    <p>审核中，请连系客服，</p>
+                    <p>微信添加:</p>
+                    <p>xxxxxxx</p>
+                    <br>
+                    <button type="button" class="col-12 send-btn" id="" onclick="close_alert_1()">确定</button>
+            </div>
+
+            <h6 id="cost">预计费用: xxxxxxx元</h6>
+            <input type="button" onclick="myFunction1()" value="Send order">
+            <a id="exportJSON" onclick="exportJson(this);" class="btn"><i class="icon-download"></i> export json</a>
+        
+        </div>
+
+   
+    </body>
+</html>
