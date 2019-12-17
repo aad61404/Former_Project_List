@@ -1,0 +1,18 @@
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .45;
+    overflow: hidden;
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;  //物件契合(object-fit)CSS屬性能指定置換元素(replaced element)的內容要如何契合、安裝到其使用的高度和寬度已確定的框。
+
+    }
+
+}
